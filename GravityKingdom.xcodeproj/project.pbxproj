@@ -21,6 +21,16 @@
 		710B552018F23680001E1065 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 710B550218F2367F001E1065 /* UIKit.framework */; };
 		710B552818F23680001E1065 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 710B552618F23680001E1065 /* InfoPlist.strings */; };
 		710B552A18F23680001E1065 /* GravityKingdomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B552918F23680001E1065 /* GravityKingdomTests.m */; };
+		710B553418F4A20F001E1065 /* GravityMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 710B553318F4A20F001E1065 /* GravityMenuBackground.png */; };
+		710B553818F4D826001E1065 /* tryBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 710B553718F4D826001E1065 /* tryBack.png */; };
+		710B553A18F4DB89001E1065 /* images1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 710B553918F4DB89001E1065 /* images1.jpg */; };
+		710B553D18F50E13001E1065 /* GuestListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B553C18F50E13001E1065 /* GuestListViewController.m */; };
+		710B554018F52375001E1065 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B553F18F52375001E1065 /* MenuViewController.m */; };
+		710B554318F52825001E1065 /* AddPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B554218F52825001E1065 /* AddPlayerViewController.m */; };
+		710B554618F529CF001E1065 /* LevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B554518F529CF001E1065 /* LevelsViewController.m */; };
+		710B554918F52AD4001E1065 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B554818F52AD4001E1065 /* GameViewController.m */; };
+		710B554C18F52BC8001E1065 /* ScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B554B18F52BC8001E1065 /* ScoresViewController.m */; };
+		710B554F18F52BF8001E1065 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B554E18F52BF8001E1065 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +63,23 @@
 		710B552518F23680001E1065 /* GravityKingdomTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GravityKingdomTests-Info.plist"; sourceTree = "<group>"; };
 		710B552718F23680001E1065 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		710B552918F23680001E1065 /* GravityKingdomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GravityKingdomTests.m; sourceTree = "<group>"; };
+		710B553318F4A20F001E1065 /* GravityMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GravityMenuBackground.png; sourceTree = "<group>"; };
+		710B553718F4D826001E1065 /* tryBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tryBack.png; sourceTree = "<group>"; };
+		710B553918F4DB89001E1065 /* images1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images1.jpg; sourceTree = "<group>"; };
+		710B553B18F50E13001E1065 /* GuestListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuestListViewController.h; sourceTree = "<group>"; };
+		710B553C18F50E13001E1065 /* GuestListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuestListViewController.m; sourceTree = "<group>"; };
+		710B553E18F52375001E1065 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		710B553F18F52375001E1065 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		710B554118F52825001E1065 /* AddPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPlayerViewController.h; sourceTree = "<group>"; };
+		710B554218F52825001E1065 /* AddPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPlayerViewController.m; sourceTree = "<group>"; };
+		710B554418F529CF001E1065 /* LevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelsViewController.h; sourceTree = "<group>"; };
+		710B554518F529CF001E1065 /* LevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelsViewController.m; sourceTree = "<group>"; };
+		710B554718F52AD4001E1065 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		710B554818F52AD4001E1065 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		710B554A18F52BC8001E1065 /* ScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoresViewController.h; sourceTree = "<group>"; };
+		710B554B18F52BC8001E1065 /* ScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoresViewController.m; sourceTree = "<group>"; };
+		710B554D18F52BF8001E1065 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		710B554E18F52BF8001E1065 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +142,20 @@
 				710B550D18F2367F001E1065 /* AppDelegate.h */,
 				710B550E18F2367F001E1065 /* AppDelegate.m */,
 				710B551018F2367F001E1065 /* Main.storyboard */,
+				710B554D18F52BF8001E1065 /* SettingsViewController.h */,
+				710B554E18F52BF8001E1065 /* SettingsViewController.m */,
+				710B554A18F52BC8001E1065 /* ScoresViewController.h */,
+				710B554B18F52BC8001E1065 /* ScoresViewController.m */,
+				710B554718F52AD4001E1065 /* GameViewController.h */,
+				710B554818F52AD4001E1065 /* GameViewController.m */,
+				710B554418F529CF001E1065 /* LevelsViewController.h */,
+				710B554518F529CF001E1065 /* LevelsViewController.m */,
+				710B554118F52825001E1065 /* AddPlayerViewController.h */,
+				710B554218F52825001E1065 /* AddPlayerViewController.m */,
+				710B553E18F52375001E1065 /* MenuViewController.h */,
+				710B553F18F52375001E1065 /* MenuViewController.m */,
+				710B553B18F50E13001E1065 /* GuestListViewController.h */,
+				710B553C18F50E13001E1065 /* GuestListViewController.m */,
 				710B551318F23680001E1065 /* ViewController.h */,
 				710B551418F23680001E1065 /* ViewController.m */,
 				710B551618F23680001E1065 /* Images.xcassets */,
@@ -126,8 +167,11 @@
 		710B550518F2367F001E1065 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				710B553318F4A20F001E1065 /* GravityMenuBackground.png */,
 				710B550618F2367F001E1065 /* GravityKingdom-Info.plist */,
 				710B550718F2367F001E1065 /* InfoPlist.strings */,
+				710B553918F4DB89001E1065 /* images1.jpg */,
+				710B553718F4D826001E1065 /* tryBack.png */,
 				710B550A18F2367F001E1065 /* main.m */,
 				710B550C18F2367F001E1065 /* GravityKingdom-Prefix.pch */,
 			);
@@ -228,9 +272,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				710B553818F4D826001E1065 /* tryBack.png in Resources */,
 				710B551718F23680001E1065 /* Images.xcassets in Resources */,
 				710B550918F2367F001E1065 /* InfoPlist.strings in Resources */,
 				710B551218F2367F001E1065 /* Main.storyboard in Resources */,
+				710B553418F4A20F001E1065 /* GravityMenuBackground.png in Resources */,
+				710B553A18F4DB89001E1065 /* images1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +296,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				710B554918F52AD4001E1065 /* GameViewController.m in Sources */,
+				710B554C18F52BC8001E1065 /* ScoresViewController.m in Sources */,
 				710B551518F23680001E1065 /* ViewController.m in Sources */,
 				710B550F18F2367F001E1065 /* AppDelegate.m in Sources */,
 				710B550B18F2367F001E1065 /* main.m in Sources */,
+				710B553D18F50E13001E1065 /* GuestListViewController.m in Sources */,
+				710B554018F52375001E1065 /* MenuViewController.m in Sources */,
+				710B554F18F52BF8001E1065 /* SettingsViewController.m in Sources */,
+				710B554318F52825001E1065 /* AddPlayerViewController.m in Sources */,
+				710B554618F529CF001E1065 /* LevelsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +514,7 @@
 				710B552F18F23680001E1065 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		710B553018F23680001E1065 /* Build configuration list for PBXNativeTarget "GravityKingdomTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +523,7 @@
 				710B553218F23680001E1065 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

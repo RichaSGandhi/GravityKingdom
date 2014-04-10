@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4EFD62EA-D36E-4463-86B8-9F0FE9EACB39</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GravityKingdom</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>74D17514-7E14-452B-8B6D-2366E1982232</key>
+		<string>https://github.com/ShivaniMete/GravityKingdom.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GravityKingdom.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>74D17514-7E14-452B-8B6D-2366E1982232</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ShivaniMete/GravityKingdom.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>74D17514-7E14-452B-8B6D-2366E1982232</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>74D17514-7E14-452B-8B6D-2366E1982232</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GravityKingdom</string>
+		</dict>
+	</array>
+</dict>
+</plist>
