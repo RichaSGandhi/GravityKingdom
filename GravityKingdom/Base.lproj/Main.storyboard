@@ -30,7 +30,7 @@
                                     <color key="titleShadowColor" red="1" green="0.0" blue="0.0" alpha="0.72999999999999998" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="grp-5q-Fzm" kind="modal" id="pec-h6-HLv"/>
+                                    <segue destination="8Ao-EZ-5FG" kind="modal" id="HZi-zD-Ryx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -409,7 +409,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="images1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fg1-Ml-9Tw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="images1.png" translatesAutoresizingMaskIntoConstraints="NO" id="cnE-XK-k8Z">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -428,7 +428,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="images1.jpg" width="258" height="184"/>
+        <image name="images1.png" width="258" height="184"/>
         <image name="tryBack.png" width="217" height="218"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -437,6 +437,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="HZi-zD-Ryx"/>
         <segue reference="jui-da-r0l"/>
     </inferredMetricsTieBreakers>
 </document>

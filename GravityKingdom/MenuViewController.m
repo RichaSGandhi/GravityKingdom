@@ -7,6 +7,7 @@
 //
 
 #import "MenuViewController.h"
+#import "LevelsViewController.h"
 
 @interface MenuViewController ()
 
@@ -21,6 +22,13 @@
         // Custom initialization
     }
     return self;
+    
+    
+    LevelsViewController *lvc = [[LevelsViewController alloc] initWithNibName:@"LevelsViewController" bundle:nil];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:lvc];
+    
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 - (void)viewDidLoad
@@ -33,6 +41,24 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
+-(NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return UIInterfaceOrientationPortrait;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
 }
 
 @end

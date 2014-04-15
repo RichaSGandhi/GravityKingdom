@@ -23,7 +23,6 @@
 		710B552A18F23680001E1065 /* GravityKingdomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B552918F23680001E1065 /* GravityKingdomTests.m */; };
 		710B553418F4A20F001E1065 /* GravityMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 710B553318F4A20F001E1065 /* GravityMenuBackground.png */; };
 		710B553818F4D826001E1065 /* tryBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 710B553718F4D826001E1065 /* tryBack.png */; };
-		710B553A18F4DB89001E1065 /* images1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 710B553918F4DB89001E1065 /* images1.jpg */; };
 		710B553D18F50E13001E1065 /* GuestListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B553C18F50E13001E1065 /* GuestListViewController.m */; };
 		710B554018F52375001E1065 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B553F18F52375001E1065 /* MenuViewController.m */; };
 		710B554318F52825001E1065 /* AddPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B554218F52825001E1065 /* AddPlayerViewController.m */; };
@@ -31,6 +30,8 @@
 		710B554918F52AD4001E1065 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B554818F52AD4001E1065 /* GameViewController.m */; };
 		710B554C18F52BC8001E1065 /* ScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B554B18F52BC8001E1065 /* ScoresViewController.m */; };
 		710B554F18F52BF8001E1065 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B554E18F52BF8001E1065 /* SettingsViewController.m */; };
+		71397CFB18F7214E00BBF5C2 /* images1.png in Resources */ = {isa = PBXBuildFile; fileRef = 71397CFA18F7214E00BBF5C2 /* images1.png */; };
+		FAA438BD18F6460D00FDAE25 /* UINavigationController+Rotation_IOS6.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA438BC18F6460D00FDAE25 /* UINavigationController+Rotation_IOS6.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +66,6 @@
 		710B552918F23680001E1065 /* GravityKingdomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GravityKingdomTests.m; sourceTree = "<group>"; };
 		710B553318F4A20F001E1065 /* GravityMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GravityMenuBackground.png; sourceTree = "<group>"; };
 		710B553718F4D826001E1065 /* tryBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tryBack.png; sourceTree = "<group>"; };
-		710B553918F4DB89001E1065 /* images1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images1.jpg; sourceTree = "<group>"; };
 		710B553B18F50E13001E1065 /* GuestListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuestListViewController.h; sourceTree = "<group>"; };
 		710B553C18F50E13001E1065 /* GuestListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuestListViewController.m; sourceTree = "<group>"; };
 		710B553E18F52375001E1065 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
@@ -80,6 +80,9 @@
 		710B554B18F52BC8001E1065 /* ScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoresViewController.m; sourceTree = "<group>"; };
 		710B554D18F52BF8001E1065 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		710B554E18F52BF8001E1065 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		71397CFA18F7214E00BBF5C2 /* images1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images1.png; sourceTree = "<group>"; };
+		FAA438BB18F645B100FDAE25 /* UINavigationController+Rotation_IOS6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Rotation_IOS6.h"; sourceTree = "<group>"; };
+		FAA438BC18F6460D00FDAE25 /* UINavigationController+Rotation_IOS6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Rotation_IOS6.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,8 @@
 				710B551418F23680001E1065 /* ViewController.m */,
 				710B551618F23680001E1065 /* Images.xcassets */,
 				710B550518F2367F001E1065 /* Supporting Files */,
+				FAA438BB18F645B100FDAE25 /* UINavigationController+Rotation_IOS6.h */,
+				FAA438BC18F6460D00FDAE25 /* UINavigationController+Rotation_IOS6.m */,
 			);
 			path = GravityKingdom;
 			sourceTree = "<group>";
@@ -170,8 +175,8 @@
 				710B553318F4A20F001E1065 /* GravityMenuBackground.png */,
 				710B550618F2367F001E1065 /* GravityKingdom-Info.plist */,
 				710B550718F2367F001E1065 /* InfoPlist.strings */,
-				710B553918F4DB89001E1065 /* images1.jpg */,
 				710B553718F4D826001E1065 /* tryBack.png */,
+				71397CFA18F7214E00BBF5C2 /* images1.png */,
 				710B550A18F2367F001E1065 /* main.m */,
 				710B550C18F2367F001E1065 /* GravityKingdom-Prefix.pch */,
 			);
@@ -277,7 +282,7 @@
 				710B550918F2367F001E1065 /* InfoPlist.strings in Resources */,
 				710B551218F2367F001E1065 /* Main.storyboard in Resources */,
 				710B553418F4A20F001E1065 /* GravityMenuBackground.png in Resources */,
-				710B553A18F4DB89001E1065 /* images1.jpg in Resources */,
+				71397CFB18F7214E00BBF5C2 /* images1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				710B554918F52AD4001E1065 /* GameViewController.m in Sources */,
+				FAA438BD18F6460D00FDAE25 /* UINavigationController+Rotation_IOS6.m in Sources */,
 				710B554C18F52BC8001E1065 /* ScoresViewController.m in Sources */,
 				710B551518F23680001E1065 /* ViewController.m in Sources */,
 				710B550F18F2367F001E1065 /* AppDelegate.m in Sources */,
