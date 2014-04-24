@@ -56,7 +56,7 @@
         skView.scene.physicsWorld.gravity = CGVectorMake(0, skView.scene.physicsWorld.gravity.dy);
 
         //init items array with number of points
-        self.items = [[NSArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7", nil];
+        self.items = [[NSArray alloc] initWithObjects: @"3",@"4",@"5",@"6",@"7", nil];
 
         
     }
