@@ -31,6 +31,7 @@
 		710B554C18F52BC8001E1065 /* ScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B554B18F52BC8001E1065 /* ScoresViewController.m */; };
 		710B554F18F52BF8001E1065 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B554E18F52BF8001E1065 /* SettingsViewController.m */; };
 		71397CFB18F7214E00BBF5C2 /* images1.png in Resources */ = {isa = PBXBuildFile; fileRef = 71397CFA18F7214E00BBF5C2 /* images1.png */; };
+		71B2170B19097DDF005373B0 /* SharedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B2170A19097DDF005373B0 /* SharedModel.m */; };
 		71F1B4221908A3D20064EF04 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F1B4211908A3D20064EF04 /* SpriteKit.framework */; };
 		71F1B4251908A42C0064EF04 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F1B4241908A42C0064EF04 /* GameScene.m */; };
 		849FBD251904F45D00804EB0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849FBD231904F43900804EB0 /* FacebookSDK.framework */; };
@@ -101,6 +102,8 @@
 		710B554D18F52BF8001E1065 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		710B554E18F52BF8001E1065 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		71397CFA18F7214E00BBF5C2 /* images1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images1.png; sourceTree = "<group>"; };
+		71B2170919097DDF005373B0 /* SharedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedModel.h; sourceTree = "<group>"; };
+		71B2170A19097DDF005373B0 /* SharedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedModel.m; sourceTree = "<group>"; };
 		71F1B4211908A3D20064EF04 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		71F1B4231908A42C0064EF04 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		71F1B4241908A42C0064EF04 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 				710B553B18F50E13001E1065 /* GuestListViewController.h */,
 				710B553C18F50E13001E1065 /* GuestListViewController.m */,
 				710B551318F23680001E1065 /* ViewController.h */,
+				71B2170919097DDF005373B0 /* SharedModel.h */,
+				71B2170A19097DDF005373B0 /* SharedModel.m */,
 				710B551418F23680001E1065 /* ViewController.m */,
 				710B551618F23680001E1065 /* Images.xcassets */,
 				FAF1BF541908C8B3008FF76C /* mainBall.png */,
@@ -396,6 +401,7 @@
 				710B554918F52AD4001E1065 /* GameViewController.m in Sources */,
 				FAA438BD18F6460D00FDAE25 /* UINavigationController+Rotation_IOS6.m in Sources */,
 				710B554C18F52BC8001E1065 /* ScoresViewController.m in Sources */,
+				71B2170B19097DDF005373B0 /* SharedModel.m in Sources */,
 				710B551518F23680001E1065 /* ViewController.m in Sources */,
 				710B550F18F2367F001E1065 /* AppDelegate.m in Sources */,
 				710B550B18F2367F001E1065 /* main.m in Sources */,
@@ -538,6 +544,7 @@
 					"/Users/admin/Downloads/GravityKingdom-master-8",
 					"/Users/divms/Downloads/GravityKingdom-master-8",
 					"/Users/pooya/Downloads/GravityKingdom-2",
+					/Users/divms/Documents/Programs/GravityKingdom,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GravityKingdom/GravityKingdom-Prefix.pch";
@@ -558,6 +565,7 @@
 					"/Users/admin/Downloads/GravityKingdom-master-8",
 					"/Users/divms/Downloads/GravityKingdom-master-8",
 					"/Users/pooya/Downloads/GravityKingdom-2",
+					/Users/divms/Documents/Programs/GravityKingdom,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GravityKingdom/GravityKingdom-Prefix.pch";

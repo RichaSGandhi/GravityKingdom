@@ -9,6 +9,7 @@
 #import "GameScene.h"
 #import "GameViewController.h"
 #import "GameViewController.h"
+#import "SharedModel.h"
 
 
 #define BALL_CATEGORY   (0x00000001)
@@ -71,7 +72,7 @@ SKShapeNode *shapeNode;
         ball.physicsBody.affectedByGravity = YES;
         ball.physicsBody.categoryBitMask = BALL_CATEGORY;
         ball.physicsBody.contactTestBitMask = 01;
-        ball.physicsBody.friction = 0.0;
+        ball.physicsBody.friction = 0.05;
         [self addChild:ball];
         self.physicsWorld.contactDelegate = self;
 
@@ -88,7 +89,7 @@ SKShapeNode *shapeNode;
 {
     
     CGPoint location;
-    
+    SharedModel* sm = [SharedModel sharedInstance];
     myPath = CGPathCreateMutable();
     for (UITouch *touch in touches) {
         location = [touch locationInNode:self];
@@ -103,7 +104,7 @@ SKShapeNode *shapeNode;
         
     }
 
-    if (counter >= 3)
+    if (counter >= (int)sm.pickerValue)
     {
         [path closePath];
         counter=0;
@@ -177,7 +178,7 @@ SKShapeNode *shapeNode;
          self.spark.position = contact.contactPoint;
          [self addChild:self.spark];
      }
-    SKAction *fadeAway =   [SKAction fadeOutWithDuration:0.25];
+    SKAction *fadeAway =   [SKAction fadeOutWithDuration:0.40];
     SKAction *removeNode = [SKAction removeFromParent];
     
     SKAction *sequence = [SKAction sequence:@[fadeAway, removeNode]];

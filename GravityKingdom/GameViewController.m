@@ -9,6 +9,7 @@
 #import "GameViewController.h"
 #import "BackgroundLessPickerView.h"
 #import "GameScene.h"
+#import "SharedModel.h"
 
 
 @interface GameViewController ()
@@ -19,6 +20,7 @@
 @property (nonatomic, strong) UIDynamicItemBehavior *bounceBehaviour;
 @property (nonatomic, strong) UIDynamicItemBehavior *bounceBehaviourForBall;
 @property (nonatomic, strong) UIPushBehavior *pusher;
+@property(nonatomic) NSInteger* selectedPickerValue;
 
 @end
 
@@ -38,7 +40,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
 	SKView * skView = (SKView *)self.view;
     if(!skView.scene)
     {
@@ -64,6 +65,7 @@
 - (IBAction)toolboxPopUp:(id)sender {
     
     CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] init];
+    SharedModel* sm = [SharedModel sharedInstance];
     
 
     // Add some custom content to the alert view
@@ -76,6 +78,10 @@
     
     [alertView setOnButtonTouchUpInside:^(CustomIOS7AlertView *alertView, int buttonIndex) {
         NSLog(@"Block: Button at position %d is clicked on alertView %d.", buttonIndex, [alertView tag]);
+        if (buttonIndex == 0)
+        {
+            sm.pickerValue = self.selectedPickerValue;
+        }
         [alertView close];
     }];
     
@@ -124,6 +130,7 @@
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
+    self.selectedPickerValue = [[self.items objectAtIndex:row] integerValue];
     return [self.items objectAtIndex:row];
 }
 
