@@ -7,9 +7,12 @@
 //
 
 #import "GameScene.h"
+#import "GameViewController.h"
+#import "GameViewController.h"
+
 
 #define BALL_CATEGORY   (0x00000001)
-#define PIG_CATEGORY    ((0x00000001)<<1)
+#define SHAPE_CATEGORY    ((0x00000001)<<2)
 #define BLOCK_CATEGORY  ((0x00000001)<<2)
 
 
@@ -19,6 +22,9 @@ UIBezierPath *path;
 CGMutablePathRef myPath;
 BOOL gameStarted;
 int counter;
+int shape;
+SKSpriteNode *ball;
+SKShapeNode *shapeNode;
 
 -(id)initWithSize:(CGSize)size
 {
@@ -31,7 +37,6 @@ int counter;
         //self.physicsBody.categoryBitMask = wallCategory;
         self.physicsBody.friction = 0.0f;
         
-        //20 10 25 1.
         self.backgroundColor = [SKColor colorWithRed:0.20 green:0.10 blue:0.20 alpha:1.0];
         
         
@@ -46,33 +51,30 @@ int counter;
         
         
         SKSpriteNode* backBone = [[SKSpriteNode alloc] initWithColor:[UIColor brownColor] size:CGSizeMake(200, 15)];
-        //110,50
         backBone.position = CGPointMake(120, 220);
         backBone.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:backBone.size];
         backBone.physicsBody.affectedByGravity = NO;
-        backBone.physicsBody.mass = 1000;
+        backBone.physicsBody.mass = 10000000;
         backBone.physicsBody.categoryBitMask = wallCategory;
         backBone.physicsBody.contactTestBitMask = 05;
         backBone.physicsBody.collisionBitMask = BLOCK_CATEGORY | wallCategory | objectCategory;
         [self addChild:backBone];
         
         
-        SKSpriteNode *ball = [SKSpriteNode spriteNodeWithImageNamed:@"myBall.png"];
+        ball = [SKSpriteNode spriteNodeWithImageNamed:@"myBall.png"];
         
         ball.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:ball.size.width/2];
         
         ball.physicsBody.dynamic = YES;
         
         ball.position = CGPointMake(130, 230);
-        ball.physicsBody.mass = 10;
-        ball.physicsBody.affectedByGravity = NO;
+        ball.physicsBody.affectedByGravity = YES;
         ball.physicsBody.categoryBitMask = BALL_CATEGORY;
         ball.physicsBody.contactTestBitMask = 01;
+        ball.physicsBody.friction = 0.0;
         [self addChild:ball];
-        
-        NSLog(@"Backbone mass is: %f", backBone.physicsBody.mass);
-        //self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
-        //self.physicsWorld.contactDelegate = self;
+        self.physicsWorld.contactDelegate = self;
+
     }
     
     path = [UIBezierPath bezierPath];
@@ -84,36 +86,13 @@ int counter;
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"In touchesBegan");
-    
-    // Uncomment below code to add shapes on click
-    /*
-     SKSpriteNode* square = [[SKSpriteNode alloc] initWithColor:[UIColor yellowColor] size:CGSizeMake(20, 20)];
-     square.position = CGPointMake(40, 400);
-     square.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:square.size];
-     //square.physicsBody.restitution = 0.8;
-     square.physicsBody.categoryBitMask = wallCategory;
-     square.physicsBody.contactTestBitMask = 10;
-     square.physicsBody.collisionBitMask = BLOCK_CATEGORY|wallCategory | objectCategory;
-     
-     [self addChild:square];  */
     
     CGPoint location;
     
     myPath = CGPathCreateMutable();
     for (UITouch *touch in touches) {
         location = [touch locationInNode:self];
-        /*  //My code
-         if(counter == 0) {
-         CGPathMoveToPoint(myPath, NULL, location.x, location.y);
-         counter++;
-         } else {
-         CGPathAddLineToPoint(myPath, NULL, location.x, location.y);
-         counter++;
-         }
-         */
-        
-        // Pooyaz coode
+
         if(counter == 0) {
             [path moveToPoint:location];
             counter++;
@@ -123,38 +102,42 @@ int counter;
         }
         
     }
-    if (counter >=3)
+
+    if (counter >= 3)
     {
         [path closePath];
         counter=0;
         
         
-        SKShapeNode *shapeNode = [[SKShapeNode alloc] init];
+        shapeNode = [[SKShapeNode alloc] init];
         shapeNode.path = path.CGPath;
         shapeNode.fillColor = [SKColor yellowColor];
         shapeNode.strokeColor = [SKColor redColor];
-        
-        //shapeNode.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:shapeNode.size];
+
         CGPathRef pathCopy = CGPathCreateCopy(shapeNode.path);
         shapeNode.physicsBody = [SKPhysicsBody bodyWithPolygonFromPath:pathCopy];
-        shapeNode.physicsBody.categoryBitMask = BLOCK_CATEGORY;
+        shapeNode.physicsBody.categoryBitMask = SHAPE_CATEGORY;
         shapeNode.physicsBody.dynamic = YES;
-        shapeNode.physicsBody.contactTestBitMask = 10;
-        shapeNode.physicsBody.collisionBitMask = BLOCK_CATEGORY|wallCategory | objectCategory;
+        shapeNode.physicsBody.contactTestBitMask = 01;
+        shapeNode.physicsBody.collisionBitMask = SHAPE_CATEGORY|wallCategory | objectCategory;
         shapeNode.name = @"ship";
-        //shapeNode.position = CGPointMake(50,80);
-        
-        //shapeNode.physicsBody = [SKPhysicsBody bodyWithPolygonFromPath:myPath];
-        //shapeNode.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:shapeNode.frame.size];
+
         shapeNode.physicsBody.dynamic = YES;
         shapeNode.physicsBody.usesPreciseCollisionDetection = YES;
         shapeNode.physicsBody.affectedByGravity = YES;
+        self.fire = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"AnimFire" ofType:@"sks"]];
+        self.fire.position = CGPointMake(shapeNode.frame.size.width, shapeNode.frame.size.height);
         
-        //shapeNode.physicsBody.density = 10.0;
-        // shapeNode.physicsBody.categoryBitMask = objectCategory;
-        // shapeNode.physicsBody.contactTestBitMask = 5;
-        //shapeNode.physicsBody.collisionBitMask = wallCategory | objectCategory;
+        self.fire.particleColor = [SKColor redColor];
+        self.fire.particleLifetime = 0.01;
+        SKAction *fadeAway =   [SKAction fadeOutWithDuration:0.75];
+        SKAction *removeNode = [SKAction removeFromParent];
         
+        SKAction *sequence = [SKAction sequence:@[fadeAway, removeNode]];
+        [self addChild:self.fire];
+        //[particles setObject:fire forKey:shapeNode];
+        //[self addChild:shapeNode];
+        [self.fire runAction: sequence];
         [self addChild:shapeNode];
         
         
@@ -165,33 +148,40 @@ int counter;
 
 -(void)update:(CFTimeInterval)currentTime
 {
-    //self.physicsBody = [SKPhysicsBody ];// bodyWithEdgeLoopFromRect:self.frame];
-    /* Called before each frame is rendered */
+
 }
 
 -(void)didBeginContact:(SKPhysicsContact *)contact
 {
-    NSLog(@"In didBeginContact");
-    if (gameStarted == NO)
-        return;
-    if(contact.bodyB == self.physicsBody || contact.bodyA == self.physicsBody)
-        return;
-    int test = PIG_CATEGORY | BLOCK_CATEGORY | wallCategory | objectCategory;
+   // NSLog(@"In didBeginContact");
+    //if (gameStarted == NO)
+    // return;
+    //if(contact.bodyB == self.physicsBody || contact.bodyA == self.physicsBody)
+    //return;
+    //int test = BALL_CATEGORY | BLOCK_CATEGORY | wallCategory | objectCategory;
     
     
-    if(contact.bodyA.categoryBitMask == PIG_CATEGORY && (contact.bodyB.categoryBitMask & test) > 0) {
-        [contact.bodyA.node removeFromParent];
-        SKEmitterNode *emitter = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"spark" ofType:@"sks"]];
-        emitter.position = contact.contactPoint;
-        [self addChild:emitter];
-    }
-    else if(contact.bodyB.categoryBitMask == PIG_CATEGORY && (contact.bodyA.categoryBitMask & test)>0) {
-        [contact.bodyB.node removeFromParent];
-        SKEmitterNode *emitter = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"spark" ofType:@"sks"]];
-        emitter.position = contact.contactPoint;
-        [self addChild:emitter];
-    }
+     /*if(contact.bodyA.categoryBitMask == BALL_CATEGORY && contact.bodyB.categoryBitMask == SHAPE_CATEGORY){
+     //if(contact.bodyA == ball.physicsBody && contact.bodyB == shapeNode.physicsBody) {
+     //[contact.bodyA.node removeFromParent];
+     NSLog(@"ball contact shape");
+     self.spark = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"AnimSpark" ofType:@"sks"]];
+     self.spark.position = contact.contactPoint;
+     self.spark.particleLifetime = 0.05;
+     [self addChild:self.spark];
+     }
+     else */if(contact.bodyB.categoryBitMask == BALL_CATEGORY && contact.bodyA.categoryBitMask == SHAPE_CATEGORY) {
+         //[contact.bodyB.node removeFromParent];
+         self.spark = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"AnimSpark" ofType:@"sks"]];
+         self.spark.particleBirthRate = 100;
+         self.spark.position = contact.contactPoint;
+         [self addChild:self.spark];
+     }
+    SKAction *fadeAway =   [SKAction fadeOutWithDuration:0.25];
+    SKAction *removeNode = [SKAction removeFromParent];
     
+    SKAction *sequence = [SKAction sequence:@[fadeAway, removeNode]];
+    [self.spark runAction: sequence];
 }
 
 

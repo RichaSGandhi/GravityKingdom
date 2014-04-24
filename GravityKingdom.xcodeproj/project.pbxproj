@@ -33,12 +33,25 @@
 		71397CFB18F7214E00BBF5C2 /* images1.png in Resources */ = {isa = PBXBuildFile; fileRef = 71397CFA18F7214E00BBF5C2 /* images1.png */; };
 		71F1B4221908A3D20064EF04 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F1B4211908A3D20064EF04 /* SpriteKit.framework */; };
 		71F1B4251908A42C0064EF04 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F1B4241908A42C0064EF04 /* GameScene.m */; };
-		71F1B42D1908C2AE0064EF04 /* myBall.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F1B42C1908C2AE0064EF04 /* myBall.png */; };
-		71F1B42F1908C2BB0064EF04 /* mainBall.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F1B42E1908C2BB0064EF04 /* mainBall.png */; };
 		849FBD251904F45D00804EB0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849FBD231904F43900804EB0 /* FacebookSDK.framework */; };
 		FAA438BD18F6460D00FDAE25 /* UINavigationController+Rotation_IOS6.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA438BC18F6460D00FDAE25 /* UINavigationController+Rotation_IOS6.m */; };
 		FAF1BF4C19037CFA008FF76C /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF1BF4B19037CFA008FF76C /* CustomIOS7AlertView.m */; };
 		FAF1BF4F19038257008FF76C /* BackgroundLessPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF1BF4E19038257008FF76C /* BackgroundLessPickerView.m */; };
+		FAF1BF561908C8B3008FF76C /* mainBall.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF1BF541908C8B3008FF76C /* mainBall.png */; };
+		FAF1BF571908C8B3008FF76C /* myBall.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF1BF551908C8B3008FF76C /* myBall.png */; };
+		FAF1BF5C19096751008FF76C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF1BF5B19096751008FF76C /* Parse.framework */; };
+		FAF1BF66190967FC008FF76C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF1BF5D190967FC008FF76C /* AudioToolbox.framework */; };
+		FAF1BF67190967FC008FF76C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF1BF5E190967FC008FF76C /* CFNetwork.framework */; };
+		FAF1BF68190967FC008FF76C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF1BF5F190967FC008FF76C /* CoreLocation.framework */; };
+		FAF1BF69190967FC008FF76C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF1BF60190967FC008FF76C /* libz.dylib */; };
+		FAF1BF6A190967FC008FF76C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF1BF61190967FC008FF76C /* MobileCoreServices.framework */; };
+		FAF1BF6B190967FC008FF76C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF1BF62190967FC008FF76C /* QuartzCore.framework */; };
+		FAF1BF6C190967FC008FF76C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF1BF63190967FC008FF76C /* Security.framework */; };
+		FAF1BF6D190967FC008FF76C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF1BF64190967FC008FF76C /* StoreKit.framework */; };
+		FAF1BF6E190967FC008FF76C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF1BF65190967FC008FF76C /* SystemConfiguration.framework */; };
+		FAF1BF71190968FB008FF76C /* AnimFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = FAF1BF6F190968FB008FF76C /* AnimFire.sks */; };
+		FAF1BF72190968FB008FF76C /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF1BF70190968FB008FF76C /* spark.png */; };
+		FAF1BF7419096912008FF76C /* AnimSpark.sks in Resources */ = {isa = PBXBuildFile; fileRef = FAF1BF7319096912008FF76C /* AnimSpark.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,8 +104,6 @@
 		71F1B4211908A3D20064EF04 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		71F1B4231908A42C0064EF04 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		71F1B4241908A42C0064EF04 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
-		71F1B42C1908C2AE0064EF04 /* myBall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = myBall.png; path = ../../myBall.png; sourceTree = "<group>"; };
-		71F1B42E1908C2BB0064EF04 /* mainBall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainBall.png; path = ../../mainBall.png; sourceTree = "<group>"; };
 		849FBD231904F43900804EB0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		FAA438BB18F645B100FDAE25 /* UINavigationController+Rotation_IOS6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Rotation_IOS6.h"; sourceTree = "<group>"; };
 		FAA438BC18F6460D00FDAE25 /* UINavigationController+Rotation_IOS6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Rotation_IOS6.m"; sourceTree = "<group>"; };
@@ -100,6 +111,21 @@
 		FAF1BF4B19037CFA008FF76C /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
 		FAF1BF4D19038257008FF76C /* BackgroundLessPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundLessPickerView.h; sourceTree = "<group>"; };
 		FAF1BF4E19038257008FF76C /* BackgroundLessPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundLessPickerView.m; sourceTree = "<group>"; };
+		FAF1BF541908C8B3008FF76C /* mainBall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBall.png; sourceTree = "<group>"; };
+		FAF1BF551908C8B3008FF76C /* myBall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myBall.png; sourceTree = "<group>"; };
+		FAF1BF5B19096751008FF76C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		FAF1BF5D190967FC008FF76C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FAF1BF5E190967FC008FF76C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		FAF1BF5F190967FC008FF76C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FAF1BF60190967FC008FF76C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		FAF1BF61190967FC008FF76C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FAF1BF62190967FC008FF76C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FAF1BF63190967FC008FF76C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FAF1BF64190967FC008FF76C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		FAF1BF65190967FC008FF76C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FAF1BF6F190968FB008FF76C /* AnimFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AnimFire.sks; sourceTree = "<group>"; };
+		FAF1BF70190968FB008FF76C /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		FAF1BF7319096912008FF76C /* AnimSpark.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AnimSpark.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +133,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF1BF5C19096751008FF76C /* Parse.framework in Frameworks */,
+				FAF1BF66190967FC008FF76C /* AudioToolbox.framework in Frameworks */,
+				FAF1BF67190967FC008FF76C /* CFNetwork.framework in Frameworks */,
+				FAF1BF68190967FC008FF76C /* CoreLocation.framework in Frameworks */,
+				FAF1BF69190967FC008FF76C /* libz.dylib in Frameworks */,
+				FAF1BF6A190967FC008FF76C /* MobileCoreServices.framework in Frameworks */,
+				FAF1BF6B190967FC008FF76C /* QuartzCore.framework in Frameworks */,
+				FAF1BF6C190967FC008FF76C /* Security.framework in Frameworks */,
+				FAF1BF6D190967FC008FF76C /* StoreKit.framework in Frameworks */,
+				FAF1BF6E190967FC008FF76C /* SystemConfiguration.framework in Frameworks */,
 				71F1B4221908A3D20064EF04 /* SpriteKit.framework in Frameworks */,
 				849FBD251904F45D00804EB0 /* FacebookSDK.framework in Frameworks */,
 				710B550118F2367F001E1065 /* CoreGraphics.framework in Frameworks */,
@@ -151,6 +187,16 @@
 		710B54FD18F2367F001E1065 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAF1BF5D190967FC008FF76C /* AudioToolbox.framework */,
+				FAF1BF5E190967FC008FF76C /* CFNetwork.framework */,
+				FAF1BF5F190967FC008FF76C /* CoreLocation.framework */,
+				FAF1BF60190967FC008FF76C /* libz.dylib */,
+				FAF1BF61190967FC008FF76C /* MobileCoreServices.framework */,
+				FAF1BF62190967FC008FF76C /* QuartzCore.framework */,
+				FAF1BF63190967FC008FF76C /* Security.framework */,
+				FAF1BF64190967FC008FF76C /* StoreKit.framework */,
+				FAF1BF65190967FC008FF76C /* SystemConfiguration.framework */,
+				FAF1BF5B19096751008FF76C /* Parse.framework */,
 				71F1B4211908A3D20064EF04 /* SpriteKit.framework */,
 				849FBD231904F43900804EB0 /* FacebookSDK.framework */,
 				710B54FE18F2367F001E1065 /* Foundation.framework */,
@@ -184,13 +230,16 @@
 				710B551318F23680001E1065 /* ViewController.h */,
 				710B551418F23680001E1065 /* ViewController.m */,
 				710B551618F23680001E1065 /* Images.xcassets */,
-				71F1B42C1908C2AE0064EF04 /* myBall.png */,
-				71F1B42E1908C2BB0064EF04 /* mainBall.png */,
-				710B550518F2367F001E1065 /* Supporting Files */,
+				FAF1BF541908C8B3008FF76C /* mainBall.png */,
+				FAF1BF551908C8B3008FF76C /* myBall.png */,
 				FAA438BB18F645B100FDAE25 /* UINavigationController+Rotation_IOS6.h */,
 				FAA438BC18F6460D00FDAE25 /* UINavigationController+Rotation_IOS6.m */,
 				71F1B4231908A42C0064EF04 /* GameScene.h */,
 				71F1B4241908A42C0064EF04 /* GameScene.m */,
+				FAF1BF6F190968FB008FF76C /* AnimFire.sks */,
+				FAF1BF70190968FB008FF76C /* spark.png */,
+				FAF1BF7319096912008FF76C /* AnimSpark.sks */,
+				710B550518F2367F001E1065 /* Supporting Files */,
 			);
 			path = GravityKingdom;
 			sourceTree = "<group>";
@@ -315,13 +364,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				710B553818F4D826001E1065 /* tryBack.png in Resources */,
-				71F1B42F1908C2BB0064EF04 /* mainBall.png in Resources */,
 				710B551718F23680001E1065 /* Images.xcassets in Resources */,
 				710B550918F2367F001E1065 /* InfoPlist.strings in Resources */,
 				710B551218F2367F001E1065 /* Main.storyboard in Resources */,
 				710B553418F4A20F001E1065 /* GravityMenuBackground.png in Resources */,
+				FAF1BF7419096912008FF76C /* AnimSpark.sks in Resources */,
+				FAF1BF72190968FB008FF76C /* spark.png in Resources */,
 				71397CFB18F7214E00BBF5C2 /* images1.png in Resources */,
-				71F1B42D1908C2AE0064EF04 /* myBall.png in Resources */,
+				FAF1BF71190968FB008FF76C /* AnimFire.sks in Resources */,
+				FAF1BF571908C8B3008FF76C /* myBall.png in Resources */,
+				FAF1BF561908C8B3008FF76C /* mainBall.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +537,7 @@
 					"/Users/admin/Downloads/ios-howtos-master",
 					"/Users/admin/Downloads/GravityKingdom-master-8",
 					"/Users/divms/Downloads/GravityKingdom-master-8",
+					"/Users/pooya/Downloads/GravityKingdom-2",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GravityKingdom/GravityKingdom-Prefix.pch";
@@ -504,6 +557,7 @@
 					"/Users/admin/Downloads/ios-howtos-master",
 					"/Users/admin/Downloads/GravityKingdom-master-8",
 					"/Users/divms/Downloads/GravityKingdom-master-8",
+					"/Users/pooya/Downloads/GravityKingdom-2",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GravityKingdom/GravityKingdom-Prefix.pch";

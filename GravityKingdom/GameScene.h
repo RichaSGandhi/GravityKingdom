@@ -13,6 +13,7 @@ static const uint8_t objectCategory = 1;
 static const uint8_t wallCategory = 2;
 
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
-
+@property SKEmitterNode *fire;
+@property SKEmitterNode *spark;
 
 @end

@@ -10,6 +10,7 @@
 #import "BackgroundLessPickerView.h"
 #import "GameScene.h"
 
+
 @interface GameViewController ()
 
 @property (nonatomic, strong) UIDynamicAnimator *animator;
@@ -19,12 +20,12 @@
 @property (nonatomic, strong) UIDynamicItemBehavior *bounceBehaviourForBall;
 @property (nonatomic, strong) UIPushBehavior *pusher;
 
+
 @end
 
 @implementation GameViewController
 @synthesize items = _items;
 
-static NSInteger const kBallSize = 25;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,6 +39,7 @@ static NSInteger const kBallSize = 25;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
 	SKView * skView = (SKView *)self.view;
     if(!skView.scene)
     {
@@ -47,28 +49,29 @@ static NSInteger const kBallSize = 25;
         // Create and configure the scene.
         SKScene * scene = [GameScene sceneWithSize:skView.bounds.size];
         scene.scaleMode = SKSceneScaleModeAspectFill;
-    
+
         // Present the scene.
         [skView presentScene:scene];
         skView = (SKView *)self.view;
         skView.scene.physicsWorld.gravity = CGVectorMake(0, skView.scene.physicsWorld.gravity.dy);
+
+        //init items array with number of points
+        self.items = [[NSArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7", nil];
+
+        
     }
     
 }
-//------------start of section of toolbar --> added by Pooya ----------------
 - (IBAction)toolboxPopUp:(id)sender {
     
-    // Here we need to pass a full frame
     CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] init];
     
-    // Add some custom content to the alert view
     [alertView setContainerView:[self createDemoView]];
     
     // Modify the parameters
     [alertView setButtonTitles:[NSMutableArray arrayWithObjects:@"Go", @"Close", nil]];
     [alertView setDelegate:self];
     
-    // You may use a Block, rather than a delegate.
     [alertView setOnButtonTouchUpInside:^(CustomIOS7AlertView *alertView, int buttonIndex) {
         NSLog(@"Block: Button at position %d is clicked on alertView %d.", buttonIndex, [alertView tag]);
         [alertView close];
@@ -76,7 +79,7 @@ static NSInteger const kBallSize = 25;
     
     [alertView setUseMotionEffects:true];
     
-    // And launch the dialog
+    // launch the dialog
     [alertView show];
 }
 
@@ -122,13 +125,12 @@ static NSInteger const kBallSize = 25;
     return [self.items objectAtIndex:row];
 }
 
-//If the user chooses from the pickerview, it calls this function;
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    //Let's print in the console what the user had chosen;
     NSLog(@"picked number of points is : %@", [self.items objectAtIndex:row]);
+
 }
-//------------end of section of toolbar --> added by Pooya ----------------
+
 #pragma mark - Gesture Recognizer
 
 - (void)onTap:(UITapGestureRecognizer*)gesture
@@ -143,7 +145,7 @@ static NSInteger const kBallSize = 25;
 
 - (void)dropBallAtX:(CGFloat)x
 {
-    /*
+    int kBallSize=25;
     UIView *ball = [[UIView alloc] initWithFrame:CGRectMake(x - (kBallSize/2), 0, kBallSize, kBallSize)];
     ball.backgroundColor = [UIColor redColor];
     ball.layer.cornerRadius = kBallSize/2;
@@ -157,26 +159,8 @@ static NSInteger const kBallSize = 25;
     [self.collisionBehavior addItem:ball];
     
     // Add the bounce
-    [self.bounceBehaviour addItem:ball];
-     */
-    UIView *square = [[UIView alloc] initWithFrame:
-                      CGRectMake(x-25.0,0.0, 50.0, 50.0)];
-    square.layer.masksToBounds = YES;
-    square.backgroundColor = [UIColor redColor];
-    
-	[self.view addSubview:square];
-    
-    // Add some gravity
-    [self.gravityBehavior addItem:square];
-    
-    // Add the collision
-    [self.collisionBehavior addItem:square];
-    
-    // Add the bounce
-    [self.bounceBehaviour addItem:square];
-    
-    //Add push behaviour
-    //[self.pusher addItem:square];
+    self.bounceBehaviourForBall.friction = 0.0;
+    [self.bounceBehaviourForBall addItem:ball];
 
 }
 

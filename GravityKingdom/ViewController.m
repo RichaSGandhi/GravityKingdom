@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 #import <FacebookSDK/FBLoginView.h>
-
+#import <Parse/Parse.h>
+#import <Parse/PFQuery.h>
 @interface ViewController ()
 
 @end
@@ -32,6 +33,15 @@
 }
 -(void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user{
     self.PlayerNameText.text = [NSString stringWithFormat:@"Hi %@!! Please press play to continue",[user first_name]];
+    PFObject *playerObject = [PFObject objectWithClassName:@"PlayerObject"];
+     playerObject[@"name"] = [user first_name];
+   // PFQuery *queryName = [PFQuery queryWithClassName:@"playerObject"];
+    ;
+    //NSArray *name = [queryName findObjects];
+    //if (name. == [user first_name] ){
+    [playerObject saveInBackground];
+   // }
+
     
     
 }
