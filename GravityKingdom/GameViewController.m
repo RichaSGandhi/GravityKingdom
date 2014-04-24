@@ -19,6 +19,8 @@
 @property (nonatomic, strong) UIDynamicItemBehavior *bounceBehaviourForBall;
 @property (nonatomic, strong) UIPushBehavior *pusher;
 
+@property(nonatomic, strong) GameScene* gameScene;
+
 @end
 
 @implementation GameViewController
@@ -61,6 +63,7 @@ static NSInteger const kBallSize = 25;
     // Here we need to pass a full frame
     CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] init];
     
+
     // Add some custom content to the alert view
     [alertView setContainerView:[self createDemoView]];
     
