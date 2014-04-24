@@ -20,6 +20,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wf-Xm-6Tl">
+                                <rect key="frame" x="74" y="259" width="173" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86286272320000001" green="0.18896024049999999" blue="0.2112391793" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="24"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cNw-vt-F2Z" kind="modal" id="s8R-Iu-fgO"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4l-kv-8Di">
                                 <rect key="frame" x="74" y="344" width="173" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -33,11 +46,22 @@
                                     <segue destination="8Ao-EZ-5FG" kind="modal" id="HZi-zD-Ryx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="1" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="252" translatesAutoresizingMaskIntoConstraints="NO" id="4Ci-5x-El0">
+                                <rect key="frame" x="31" y="195" width="252" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="stK-QP-ruw"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="PlayerNameText" destination="4Ci-5x-El0" id="pfg-KJ-yMV"/>
+                        <outlet property="playButton" destination="0wf-Xm-6Tl" id="1hy-8V-P6i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qX2-uf-fiw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Wg-8J-D4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-951" y="-1594"/>
+            <point key="canvasLocation" x="-1251" y="-1594"/>
         </scene>
         <!--Guest List View Controller - Title-->
         <scene sceneID="f0J-mo-nAX">
@@ -155,11 +179,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="vK1-jW-i7r">
-                                        <barButtonItem key="rightBarButtonItem" title="+" id="8uQ-kA-91F">
-                                            <connections>
-                                                <segue destination="8Ao-EZ-5FG" kind="modal" id="eEI-qm-sIe"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="+" id="8uQ-kA-91F"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -214,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xIZ-p0-ACb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-527" y="-532"/>
+            <point key="canvasLocation" x="-295" y="-640"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="mus-MB-tpi">
@@ -239,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HfP-QD-K6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="334" y="-928"/>
+            <point key="canvasLocation" x="-798" y="-1008"/>
         </scene>
         <!--Levels View Controller-->
         <scene sceneID="TVG-Kh-S2B">
@@ -369,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gVw-ck-YoL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="345" y="-1486"/>
+            <point key="canvasLocation" x="-475" y="-1458"/>
         </scene>
         <!--Scores View Controller-->
         <scene sceneID="5Z2-gq-YhC">
@@ -395,7 +415,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8r9-if-8Xi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1931" y="-960"/>
+            <point key="canvasLocation" x="1135" y="-1458"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -405,14 +425,20 @@
                         <viewControllerLayoutGuide type="top" id="Rsw-1R-fKh"/>
                         <viewControllerLayoutGuide type="bottom" id="XAb-Bg-68x"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="images1.png" translatesAutoresizingMaskIntoConstraints="NO" id="cnE-XK-k8Z">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kI-YS-jbr">
+                                <rect key="frame" x="250" y="57" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toolboxPopUp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QzW-wp-HR2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -424,11 +450,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1899" y="-1566"/>
+            <point key="canvasLocation" x="419" y="-1458"/>
         </scene>
     </scenes>
     <resources>
-        <image name="images1.png" width="258" height="184"/>
         <image name="tryBack.png" width="217" height="218"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -437,7 +462,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="HZi-zD-Ryx"/>
-        <segue reference="jui-da-r0l"/>
+        <segue reference="s8R-Iu-fgO"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+//#import <FacebookSDK/FacebookSDK.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (weak, nonatomic) IBOutlet UILabel *PlayerNameText;
 
 @end
