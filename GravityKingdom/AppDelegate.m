@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
@@ -19,6 +20,9 @@
     // Override point for customization after application launch.
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [FBLoginView class];
+    [Parse setApplicationId:@"gPVoCpY8xIYrtgCtD29jnXJGkFnxknZEFm7boEPj"
+                  clientKey:@"RN1tvvi4pf5GPGwaWb3VGmjrIuU9ywSGQeIfe0nU"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     return YES;
 }
 							
