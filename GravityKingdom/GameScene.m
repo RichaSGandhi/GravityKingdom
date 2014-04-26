@@ -8,14 +8,18 @@
 
 #import "GameScene.h"
 #import "GameViewController.h"
-#import "GameViewController.h"
+//#import "GameViewController.h"
 #import "SharedModel.h"
-
+#import "ScoringGame.h"
 
 #define BALL_CATEGORY   (0x00000001)
 #define SHAPE_CATEGORY    ((0x00000001)<<2)
 #define BLOCK_CATEGORY  ((0x00000001)<<2)
 
+@interface GameScene()
+@property (nonatomic, strong) ScoringGame *scoringGame;
+
+@end
 
 @implementation GameScene
 
@@ -26,11 +30,21 @@ int counter;
 int shape;
 SKSpriteNode *ball;
 SKShapeNode *shapeNode;
+SKSpriteNode *obstacle;
+SKSpriteNode *mark;
+SKLabelNode *scores;
+int obstaclesHit;
+
+- (ScoringGame *) scoringGame {
+	if (!_scoringGame)
+		_scoringGame = [[ScoringGame alloc] init];
+	return _scoringGame;
+}
 
 -(id)initWithSize:(CGSize)size
 {
     counter = 0;
-    
+    obstaclesHit = 0;
     if (self = [super initWithSize:size]) {
         //Setup your scene here
         //self.physicsBody= [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
@@ -40,6 +54,13 @@ SKShapeNode *shapeNode;
         
         self.backgroundColor = [SKColor colorWithRed:0.20 green:0.10 blue:0.20 alpha:1.0];
         
+        scores = [SKLabelNode labelNodeWithFontNamed:@"ScoreLabel"];
+        
+        scores.text = @"Scores: 0";
+        scores.fontSize = 10;
+        scores.position = CGPointMake(30,350);
+        
+        [self addChild:scores];
         
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
@@ -62,7 +83,7 @@ SKShapeNode *shapeNode;
         [self addChild:backBone];
         
         
-        ball = [SKSpriteNode spriteNodeWithImageNamed:@"myBall.png"];
+        ball = [SKSpriteNode spriteNodeWithImageNamed:@"myMainBall.png"];
         
         ball.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:ball.size.width/2];
         
@@ -72,8 +93,24 @@ SKShapeNode *shapeNode;
         ball.physicsBody.affectedByGravity = YES;
         ball.physicsBody.categoryBitMask = BALL_CATEGORY;
         ball.physicsBody.contactTestBitMask = 01;
+        //ball.physicsBody.collisionBitMask = objectCategory;
         ball.physicsBody.friction = 0.05;
         [self addChild:ball];
+        self.physicsWorld.contactDelegate = self;
+        
+        obstacle = [SKSpriteNode spriteNodeWithImageNamed:@"ObsBall .png"];
+        
+        obstacle.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:ball.size.width/2];
+        
+        obstacle.physicsBody.dynamic = YES;
+        
+        obstacle.position = CGPointMake(200, 230);
+        obstacle.physicsBody.affectedByGravity = YES;
+        obstacle.physicsBody.categoryBitMask = objectCategory;
+        obstacle.physicsBody.contactTestBitMask = 01;
+        obstacle.physicsBody.collisionBitMask = BALL_CATEGORY| wallCategory;
+        //obstacle.physicsBody.friction = 0.05;
+        [self addChild:obstacle];
         self.physicsWorld.contactDelegate = self;
 
     }
@@ -90,14 +127,21 @@ SKShapeNode *shapeNode;
     
     CGPoint location;
     SharedModel* sm = [SharedModel sharedInstance];
-    myPath = CGPathCreateMutable();
+        myPath = CGPathCreateMutable();
     for (UITouch *touch in touches) {
         location = [touch locationInNode:self];
-
+        NSLog(@"%f",location.x);
+        NSLog(@"%f",location.y);
+        mark = [SKSpriteNode spriteNodeWithImageNamed:@"marker.png"];
+        mark.name = @"marker";
+        mark.position = location;
+        [self addChild:mark];
+        
         if(counter == 0) {
             [path moveToPoint:location];
             counter++;
-        } else {
+        }
+        else {
             [path addLineToPoint:location];
             counter++;
         }
@@ -106,10 +150,12 @@ SKShapeNode *shapeNode;
 
     if (counter >= (int)sm.pickerValue)
     {
+        [self enumerateChildNodesWithName:@"marker" usingBlock:^(SKNode *node, BOOL *stop) {
+            [node removeFromParent];
+        }];
+
         [path closePath];
         counter=0;
-        
-        
         shapeNode = [[SKShapeNode alloc] init];
         shapeNode.path = path.CGPath;
         shapeNode.fillColor = [SKColor yellowColor];
@@ -154,7 +200,19 @@ SKShapeNode *shapeNode;
 
 -(void)didBeginContact:(SKPhysicsContact *)contact
 {
-   // NSLog(@"In didBeginContact");
+    NSLog(@"In didBeginContact");
+    SharedModel* sm = [SharedModel sharedInstance];
+    if(contact.bodyA.categoryBitMask == BALL_CATEGORY && contact.bodyB.categoryBitMask == objectCategory)
+    {
+        NSLog(@"Ball touched obstacle");
+        obstaclesHit++;
+        [obstacle removeFromParent];
+        sm.scores =[self.scoringGame calculateScore:obstaclesHit];
+        [self updateScores];
+        NSLog(@"Ball touched obstacle: %ld",(long)[self.scoringGame calculateScore:obstaclesHit]);
+        
+    }
+    
     //if (gameStarted == NO)
     // return;
     //if(contact.bodyB == self.physicsBody || contact.bodyA == self.physicsBody)
@@ -185,5 +243,11 @@ SKShapeNode *shapeNode;
     [self.spark runAction: sequence];
 }
 
+
+-(void) updateScores
+{
+    SharedModel* sm = [SharedModel sharedInstance];
+    scores.text = [NSString stringWithFormat:@"Score: %i", sm.scores];
+}
 
 @end

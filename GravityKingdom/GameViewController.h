@@ -16,4 +16,10 @@
 
 @property(nonatomic,strong) NSArray * items;
 
+@property (weak, nonatomic) IBOutlet UIButton *gameOverButton;
+
+- (IBAction)gameOverClick:(id)sender;
+
+- (IBAction)finishGame:(id)sender;
+
 @end

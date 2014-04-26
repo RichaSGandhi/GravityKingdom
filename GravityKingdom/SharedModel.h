@@ -13,5 +13,5 @@
 +(SharedModel *) sharedInstance;
 
 @property (nonatomic) NSInteger *pickerValue;
-@property (strong, nonatomic) NSString *prop2;
+@property (nonatomic) int scores;
 @end

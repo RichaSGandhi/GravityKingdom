@@ -10,4 +10,6 @@
 
 @interface ScoresViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+
 @end

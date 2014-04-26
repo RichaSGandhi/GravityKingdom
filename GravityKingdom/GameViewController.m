@@ -10,7 +10,7 @@
 #import "BackgroundLessPickerView.h"
 #import "GameScene.h"
 #import "SharedModel.h"
-
+#import "ScoresViewController.h"
 
 @interface GameViewController ()
 
@@ -21,6 +21,7 @@
 @property (nonatomic, strong) UIDynamicItemBehavior *bounceBehaviourForBall;
 @property (nonatomic, strong) UIPushBehavior *pusher;
 @property(nonatomic) NSInteger* selectedPickerValue;
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 
 @end
 
@@ -40,7 +41,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.gameOverButton.hidden = YES;
+    //SharedModel* sm = [SharedModel sharedInstance];
 	SKView * skView = (SKView *)self.view;
+    
+    
+   // [self.scoreLabel setText:[NSString stringWithFormat:@"Score: %d", sm.scores]];
+    
     if(!skView.scene)
     {
         skView.showsFPS = YES;
@@ -63,10 +70,10 @@
     
 }
 - (IBAction)toolboxPopUp:(id)sender {
+    //[self gameOverTriggered:self.gameOverButton];
     
     CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] init];
     SharedModel* sm = [SharedModel sharedInstance];
-    
 
     // Add some custom content to the alert view
 
@@ -187,5 +194,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"Preparing for segues");
+    ScoresViewController *scoreVC = segue.destinationViewController;
+}
+
 
 @end

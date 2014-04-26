@@ -34,6 +34,11 @@
 		71B2170B19097DDF005373B0 /* SharedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B2170A19097DDF005373B0 /* SharedModel.m */; };
 		71F1B4221908A3D20064EF04 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F1B4211908A3D20064EF04 /* SpriteKit.framework */; };
 		71F1B4251908A42C0064EF04 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F1B4241908A42C0064EF04 /* GameScene.m */; };
+		71F3E0C0190BA3040090CD26 /* ObsBall .png in Resources */ = {isa = PBXBuildFile; fileRef = 71F3E0BF190BA3040090CD26 /* ObsBall .png */; };
+		71F50B4C190C382C0098F0D0 /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F50B4B190C382B0098F0D0 /* marker.png */; };
+		71F50B4F190C3FCA0098F0D0 /* ScoringGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F50B4E190C3FCA0098F0D0 /* ScoringGame.m */; };
+		71F50B53190C57FA0098F0D0 /* myMainBall.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F50B52190C57FA0098F0D0 /* myMainBall.png */; };
+		71F50B55190C59150098F0D0 /* newObs.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F50B54190C59150098F0D0 /* newObs.png */; };
 		849FBD251904F45D00804EB0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849FBD231904F43900804EB0 /* FacebookSDK.framework */; };
 		FAA438BD18F6460D00FDAE25 /* UINavigationController+Rotation_IOS6.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA438BC18F6460D00FDAE25 /* UINavigationController+Rotation_IOS6.m */; };
 		FAF1BF4C19037CFA008FF76C /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF1BF4B19037CFA008FF76C /* CustomIOS7AlertView.m */; };
@@ -107,6 +112,12 @@
 		71F1B4211908A3D20064EF04 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		71F1B4231908A42C0064EF04 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		71F1B4241908A42C0064EF04 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		71F3E0BF190BA3040090CD26 /* ObsBall .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ObsBall .png"; sourceTree = "<group>"; };
+		71F50B4B190C382B0098F0D0 /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker.png; sourceTree = "<group>"; };
+		71F50B4D190C3FCA0098F0D0 /* ScoringGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoringGame.h; path = Model/ScoringGame.h; sourceTree = "<group>"; };
+		71F50B4E190C3FCA0098F0D0 /* ScoringGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoringGame.m; path = Model/ScoringGame.m; sourceTree = "<group>"; };
+		71F50B52190C57FA0098F0D0 /* myMainBall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myMainBall.png; sourceTree = "<group>"; };
+		71F50B54190C59150098F0D0 /* newObs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newObs.png; sourceTree = "<group>"; };
 		849FBD231904F43900804EB0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		FAA438BB18F645B100FDAE25 /* UINavigationController+Rotation_IOS6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Rotation_IOS6.h"; sourceTree = "<group>"; };
 		FAA438BC18F6460D00FDAE25 /* UINavigationController+Rotation_IOS6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Rotation_IOS6.m"; sourceTree = "<group>"; };
@@ -170,6 +181,8 @@
 		710B54F218F2367F001E1065 = {
 			isa = PBXGroup;
 			children = (
+				71F50B4D190C3FCA0098F0D0 /* ScoringGame.h */,
+				71F50B4E190C3FCA0098F0D0 /* ScoringGame.m */,
 				FAF1BF4919037CFA008FF76C /* View */,
 				710B550418F2367F001E1065 /* GravityKingdom */,
 				710B552318F23680001E1065 /* GravityKingdomTests */,
@@ -236,6 +249,10 @@
 				710B551418F23680001E1065 /* ViewController.m */,
 				710B551618F23680001E1065 /* Images.xcassets */,
 				FAF1BF541908C8B3008FF76C /* mainBall.png */,
+				71F3E0BF190BA3040090CD26 /* ObsBall .png */,
+				71F50B54190C59150098F0D0 /* newObs.png */,
+				71F50B4B190C382B0098F0D0 /* marker.png */,
+				71F50B52190C57FA0098F0D0 /* myMainBall.png */,
 				FAF1BF551908C8B3008FF76C /* myBall.png */,
 				FAA438BB18F645B100FDAE25 /* UINavigationController+Rotation_IOS6.h */,
 				FAA438BC18F6460D00FDAE25 /* UINavigationController+Rotation_IOS6.m */,
@@ -371,13 +388,17 @@
 				710B553818F4D826001E1065 /* tryBack.png in Resources */,
 				710B551718F23680001E1065 /* Images.xcassets in Resources */,
 				710B550918F2367F001E1065 /* InfoPlist.strings in Resources */,
+				71F50B4C190C382C0098F0D0 /* marker.png in Resources */,
 				710B551218F2367F001E1065 /* Main.storyboard in Resources */,
+				71F50B55190C59150098F0D0 /* newObs.png in Resources */,
 				710B553418F4A20F001E1065 /* GravityMenuBackground.png in Resources */,
 				FAF1BF7419096912008FF76C /* AnimSpark.sks in Resources */,
 				FAF1BF72190968FB008FF76C /* spark.png in Resources */,
 				71397CFB18F7214E00BBF5C2 /* images1.png in Resources */,
+				71F50B53190C57FA0098F0D0 /* myMainBall.png in Resources */,
 				FAF1BF71190968FB008FF76C /* AnimFire.sks in Resources */,
 				FAF1BF571908C8B3008FF76C /* myBall.png in Resources */,
+				71F3E0C0190BA3040090CD26 /* ObsBall .png in Resources */,
 				FAF1BF561908C8B3008FF76C /* mainBall.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +425,7 @@
 				71B2170B19097DDF005373B0 /* SharedModel.m in Sources */,
 				710B551518F23680001E1065 /* ViewController.m in Sources */,
 				710B550F18F2367F001E1065 /* AppDelegate.m in Sources */,
+				71F50B4F190C3FCA0098F0D0 /* ScoringGame.m in Sources */,
 				710B550B18F2367F001E1065 /* main.m in Sources */,
 				FAF1BF4F19038257008FF76C /* BackgroundLessPickerView.m in Sources */,
 				710B553D18F50E13001E1065 /* GuestListViewController.m in Sources */,

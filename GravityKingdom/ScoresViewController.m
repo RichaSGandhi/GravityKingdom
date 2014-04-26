@@ -7,7 +7,7 @@
 //
 
 #import "ScoresViewController.h"
-
+#import "SharedModel.h"
 @interface ScoresViewController ()
 
 @end
@@ -26,6 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    SharedModel* sm = [SharedModel sharedInstance];
+    self.scoreLabel.text = [NSString stringWithFormat:@"Final Score: %i",sm.scores];
 	// Do any additional setup after loading the view.
 }
 
